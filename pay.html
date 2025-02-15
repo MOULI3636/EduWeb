@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Payment Form</title>
+    <link rel="stylesheet" href="pay.css">
+</head>
+<body>
+    <div class="container">
+        <form action="" method="get">
+            <h1 class="main_heading">💳 Secure Payment Form</h1>
+            <p class="subtext">Fields marked with * are required</p>
+            
+            <h2>📝 Contact Information</h2>
+
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" required name="name" placeholder="Enter your full name">
+
+            <!-- Fixed Gender Selection -->
+            <fieldset>
+                <legend>Gender *</legend>
+                <div class="gender-options">
+                    <label for="male">
+                        <input type="radio" name="gender" id="male" value="male" required> Male
+                    </label>
+                    <label for="female">
+                        <input type="radio" name="gender" id="female" value="female" required> Female
+                    </label>
+                    <label for="other">
+                        <input type="radio" name="gender" id="other" value="other" required> Other
+                    </label>
+                </div>
+            </fieldset>
+
+            <label for="address">Address *</label>
+            <textarea name="address" id="address" cols="50" rows="4" required placeholder="Enter Your Address"></textarea>
+
+            <label for="email">Email *</label>
+            <input type="email" name="email" id="email" required placeholder="yourname@example.com">
+
+            <label for="pincode">Pincode *</label>
+            <input type="number" name="pincode" id="pincode" required placeholder="741109">
+
+            <hr>
+
+            <h3>💰 Payment Information</h3>
+
+            <label for="card_type">Card Type *</label>
+            <select name="card_type" id="card_type" required>
+                <option value="">-- Select a Card Type --</option>
+                <option value="visa">Visa</option>
+                <option value="mastercard">MasterCard</option>
+                <option value="rupay">RuPay</option>
+            </select>
+
+            <label for="card_number">Card Number *</label>
+            <input type="number" name="card_number" id="card_number" required placeholder="1234 5678 9012 3456">
+
+            <label for="exp_date">Expiration Date *</label>
+            <input type="date" name="exp_date" id="exp_date" required>
+
+            <label for="CVV">CVV *</label>
+            <input type="password" name="CVV" id="CVV" required placeholder="***">
+
+            <button type="submit" class="pay-button">💸 Pay Now</button>
+        </form>
+    </div>
+</body>
+</html>
